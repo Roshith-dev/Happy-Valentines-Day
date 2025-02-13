@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Letter</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+        
+        body {
+            background: url('1.jpg') no-repeat center center/cover;
+            font-family: 'Georgia', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+        }
+        .letter-container {
+            background: rgba(255, 245, 235, 0.9);
+            padding: 30px;
+            width: 60%;
+            max-width: 600px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            text-align: center;
+            position: relative;
+            border-left: 4px solid #d6336c;
+            background-image: repeating-linear-gradient(white, white 23px, #d3d3d3 24px);
+        }
+        .letter-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 40px;
+            height: 100%;
+            width: 2px;
+            background: #d6336c;
+        }
+        .letter-container h1 {
+            color: #d6336c;
+            font-size: 28px;
+            font-family: 'Dancing Script', cursive;
+        }
+        .letter-content {
+            text-align: left;
+            font-size: 18px;
+            color: #333;
+            margin-top: 20px;
+            white-space: pre-wrap;
+            line-height: 24px;
+            padding-left: 50px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 20px;
+        }
+        .polaroid {
+            position: absolute;
+            background: white;
+            padding: 20px 20px 60px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transform: rotate(-5deg);
+        }
+        .polaroid img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+        .polaroid:nth-child(1) { top: 10%; left: 5%; transform: rotate(-10deg); }
+        .polaroid:nth-child(2) { top: 60%; left: 70%; transform: rotate(10deg); }
+        .polaroid:nth-child(3) { top: 40%; left: 20%; transform: rotate(-5deg); }
+    </style>
+</head>
+<body>
+    <div class="polaroid" style="top: 10%; left: 5%;"><img src="images/16.jpg" alt="Your Photo"></div>
+    <div class="polaroid" style="top: 60%; left: 70%;"><img src="https://via.placeholder.com/120" alt="Your Photo"></div>
+   
+    <div class="letter-container">
+        <h1>My Dearest Love,</h1>
+        <p class="letter-content" contenteditable="true">Write your heartfelt message here...</p>
+    </div>
+</body>
+</html>
